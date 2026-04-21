@@ -1,0 +1,53 @@
+ <!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Chat Interactivo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="chat-card" aria-label="Chat interactivo">
+        <header class="chat-header">
+          <h1>Chat Interactivo</h1>
+          <p id="creditsInfo" class="credits-info">Créditos: 1000</p>
+        </header>
+
+        <div id="chatMessages" class="chat-messages" aria-live="polite"></div>
+
+        <div class="quick-questions" aria-label="Preguntas sugeridas">
+          <button type="button" class="quick-btn" data-question="fecha">
+            Fecha
+          </button>
+          <button type="button" class="quick-btn" data-question="clima">
+            Clima
+          </button>
+          <button type="button" class="quick-btn" data-question="hora">
+            Hora
+          </button>
+          <button type="button" class="quick-btn" data-question="saludo">
+            Saludo
+          </button>
+          <button type="button" class="quick-btn" data-question="suma 2 + 2">
+            Suma 2 + 2
+          </button>
+        </div>
+
+        <form id="chatForm" class="chat-input" autocomplete="off">
+          <label id="userInputLabel" for="userInput" class="sr-only">Escribe tu pregunta</label>
+          <input
+            id="userInput"
+            name="userInput"
+            type="text"
+            placeholder="Escribe una pregunta..."
+            required
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
